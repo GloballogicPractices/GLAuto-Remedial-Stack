@@ -1,0 +1,22 @@
+---
+description: remedy
+tags: []
+type:
+  ref: standard
+  parameters:
+enabled: true
+name: remedy
+trigger:
+  ref: aws.sqs_new_message
+  type: aws.sqs_new_message
+  parameters:
+criteria:
+  trigger.queue:
+    pattern: <queue name>
+    type: contains
+action:
+  ref: core.local_sudo
+  parameters:
+    cmd: 'echo -e  ''{{trigger.body}}'' >  /opt/queue.out && python /opt/remedy.py'
+pack: aws
+ref: aws.remedy

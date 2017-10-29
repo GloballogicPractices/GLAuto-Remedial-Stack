@@ -1,0 +1,22 @@
+---
+description: remedialsummary
+tags: []
+type:
+  ref: standard
+  parameters:
+enabled: true
+name: remedialsummary
+trigger:
+  ref: aws.sqs_new_message
+  type: aws.sqs_new_message
+  parameters:
+criteria:
+  trigger.body:
+    pattern: <qeue name>
+    type: contains
+action:
+  ref: core.local_sudo
+  parameters:
+    cmd: 'echo -e  ''{{trigger.body}}'' >  /opt/summary.out  &&  bash /opt/summary.sh'
+pack: aws
+ref: aws.remedialsummary
