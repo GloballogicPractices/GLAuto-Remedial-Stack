@@ -21,8 +21,8 @@ Before using this stack you need to have below things already in your infrastruc
 	
 	* Configuring/Installing StackStorm Packs
 	
-		```Use below link to install StackStrom on your infrastructure
-		https://docs.stackstorm.com/install/index.html```
+			Use below link to install StackStrom on your infrastructure
+			https://docs.stackstorm.com/install/index.html
 			
 	* Configuring/Installing StackStorm Packs
 		
