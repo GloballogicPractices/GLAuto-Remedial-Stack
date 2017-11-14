@@ -18,6 +18,11 @@ Before using this stack you need to have below things already in your infrastruc
       `MON_<Project>_<Module>_<NameSpace>_<Metric>_<Hostname>`
       
 * #### For Private Cloud (OpenStack/VMware)
+	##### Public cloud recovery flow
+		Process(Down) -> Prometheus -> AlertManager -> Alerta -> RabbitMQ -> StackStrom -> Rundeck
+StackStrom(NoAction) <- RabbitMQ <- Alerta <- AlertManager <- Prometheus <- Process(Up) <- Rundeck
+
+
 	* Envirnoment being monitoered by Prometheus
 	* Prometheus alerts needs to be enable to send notification on Alertmanager then Alerta
 	* Alertashould be sending alerts to RabbitMQ
@@ -78,7 +83,7 @@ Before using this stack you need to have below things already in your infrastruc
 			st2 pack config rabbitmq
 			enter your cred's and queue name
 			git clone https://github.com/GloballogicPractices/GLAuto-Remedial-Stack.git
-			st2 rule add -f GLAuto-Remedial-Stack/stackstrom/rules/priv-remedy.yaml
+			st2 rule add -f GLAuto-Remedial-Stack/stackstrom/rules/remedy.yaml
 			st2 rule add -f GLAuto-Remedial-Stack/stackstrom/rules/summary.yaml	
 				
 	* Installing RunDeck/CLI - Same as public cloud
