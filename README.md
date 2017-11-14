@@ -20,7 +20,7 @@ Before using this stack you need to have below things already in your infrastruc
 * #### For Private Cloud (OpenStack/VMware)
 	##### Public cloud recovery flow
 		Process(Down) -> Prometheus -> AlertManager -> Alerta -> RabbitMQ -> StackStrom -> Rundeck
-StackStrom(NoAction) <- RabbitMQ <- Alerta <- AlertManager <- Prometheus <- Process(Up) <- Rundeck
+		StackStrom(NoAction) <- RabbitMQ <- Alerta <- AlertManager <- Prometheus <- Process(Up) <- Rundeck
 
 
 	* Envirnoment being monitoered by Prometheus
