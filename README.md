@@ -64,38 +64,26 @@ Before using this stack you need to have below things already in your infrastruc
  
  * #### Installing and Configuring stack for Private Cloud (OpenStack)
  
-	* Configuring/Installing StackStorm - #### Same as Public Cloud
+	* Configuring/Installing StackStorm  - Same as public cloud
 			
 	* Configuring/Installing StackStorm Packs
 		
 			After Installation use st2 utility to install required packs
-			st2 pack install aws
-			st2 pack config aws
-			enter your AWS cred's and queue name
+			st2 pack install rabbitmq
+			st2 pack config rabbitmq
+			enter your cred's and queue name
 			git clone https://github.com/GloballogicPractices/GLAuto-Remedial-Stack.git
-			st2 rule add -f GLAuto-Remedial-Stack/stackstrom/rules/remedy.yaml
+			st2 rule add -f GLAuto-Remedial-Stack/stackstrom/rules/priv-remedy.yaml
 			st2 rule add -f GLAuto-Remedial-Stack/stackstrom/rules/summary.yaml	
 				
-	* Installing RunDeck/CLI
-
-			Use below link to install RunDeck
-				http://rundeck.org/docs/administration/installation.html
-				
-			Use below link to install RunDeck Cli
-				https://github.com/rundeck/rundeck-cli
+	* Installing RunDeck/CLI - Same as public cloud
 			
-	* Configure RunDeck
+	* Configure RunDeck - Same as public cloud
 
-		* Create new project
-		* Create job and add [rundeck/process.sh](process.sh) into it 
-			
-
-	* Installing Redmine
+	* Installing Redmine - Same as public cloud
 		
-			Use below link to install Redmine
-				http://www.redmine.org/projects/redmine/wiki/How_to_Install_Redmine_on_CentOS_(Detailed)
 				
-	* CloudWatch Plugins
+	* Prometheus Alerta/RabbiMQ
 
 		* You can use your own CloudWatch plugins for this stack
 		* Make sure that Alert name should be in the above mentioned format.
