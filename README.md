@@ -7,8 +7,8 @@ Before using this stack you need to have below things already in your infrastruc
 
 * #### For Public Cloud (AWS)
 	##### Public cloud recovery flow
-		HTTPD(Down) -> CloudWatch -> SNS -> SQS -> StackStrom -> Rundeck
-        StackStrom(NoAction) <- RabbitMQ <- Alerta <- AlertManager <- Prometheus <- node_exporter(Up) <- Rundeck
+		Process(Down) -> CloudWatch -> SNS -> SQS -> StackStrom -> Rundeck
+        StackStrom(NoAction) <- SQS <- SNS <- CloudWatch <- Process(Up) <- Rundeck
 
 	* AWS envirnoment being monitoered by CloudWatch
 	* Cloudwatch alerts needs to be enable to send notification on SNS topic
