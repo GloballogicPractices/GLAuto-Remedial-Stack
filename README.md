@@ -5,7 +5,7 @@ This stack allows you to impliment auto remdiation on your infrastructure.
 ## Pre-Requisite
 Before using this stack you need to have below things already in your infrastructure.
 
-* For Public Cloud (AWS)
+* # For Public Cloud (AWS)
 	* AWS envirnoment being monitoered by CloudWatch
 	* Cloudwatch alerts needs to be enable to send notification on SNS topic
 	* SNS topic should be subscribe with SQS
