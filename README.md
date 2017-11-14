@@ -81,10 +81,27 @@ Before using this stack you need to have below things already in your infrastruc
 	* Configure RunDeck - Same as public cloud
 
 	* Installing Redmine - Same as public cloud
-		
-				
-	* Prometheus Alerta/RabbiMQ
+					
+	* Installing RabbiMQ
 
-		* You can use your own CloudWatch plugins for this stack
-		* Make sure that Alert name should be in the above mentioned format.
+		Use below link to install RabbitMQ
+			https://www.rabbitmq.com/install-rpm.html
+		
+	* Installing Prometheus
+
+		Use below link to install Prometheus
+			https://prometheus.io/docs/prometheus/latest/installation/
+			
+	* Installing Alerta
+
+		Alerta installation
+			http://alerta.readthedocs.io/en/latest/quick-start.html
+			https://github.com/alerta/alerta-contrib/tree/master/plugins/amqp
+			
+	* Prometheus Plugins
+		* You can use official prometheus plugin
+		* Or use metrics.sh for customize plugin
+		
+
+
 
